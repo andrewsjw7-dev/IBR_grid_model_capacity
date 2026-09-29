@@ -12,7 +12,11 @@ $$\rho_{\mathrm{SG}}+\rho_{\mathrm{GFM}}+\rho_{\mathrm{GFL}}=1$$
 is varied across the complete SG–GFM–GFL simplex while demand is held fixed.
 
 ---
+## Background
 
+This repository contains an output from the [ESGI-195 in Exeter](https://mathematics.exeter.ac.uk/esgi/) and the report will appear in [MIIR](https://www.cambridge.org/engage/miir/public-dashboard). An alternative approach was also considered using a more complete (relative to this network approach) and can be found [GFL--GFM MATLAB code](https://github.com/creeszimmerman/esgi-195).
+
+---
 ## What Version 4.1 changes
 
 Version 4.1 makes one deliberate benchmark change relative to Version 4:
