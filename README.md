@@ -6,9 +6,8 @@ This repository contains **Version 4.1** of the model developed from the ESGI 19
 
 The central Version 4.1 experiment is a three-bus composition study in which the installed generation mix
 
-\[
-\rho_{\mathrm{SG}}+\rho_{\mathrm{GFM}}+\rho_{\mathrm{GFL}}=1
-\]
+$$\rho_{\mathrm{SG}}+\rho_{\mathrm{GFM}}+\rho_{\mathrm{GFL}}=1$$
+
 
 is varied across the complete SG–GFM–GFL simplex while demand is held fixed.
 
@@ -46,16 +45,12 @@ At the 100% SG point:
 
 The least-damped feasible point on the 2.5% grid is near
 
-\[
-(\rho_{\mathrm{SG}},\rho_{\mathrm{GFM}},\rho_{\mathrm{GFL}})
-=(0.025,0.975,0),
-\]
+$$(\rho_{\mathrm{SG}},\rho_{\mathrm{GFM}},\rho_{\mathrm{GFL}})
+=(0.025,0.975,0),$$
 
 with critical eigenvalue approximately
 
-\[
-\lambda=-0.6248 \pm 11.9349\,i,
-\]
+$$\lambda=-0.6248 \pm 11.9349\,i,$$
 
 corresponding to a mode at approximately **1.90 Hz** with damping ratio approximately **5.23%**.
 
@@ -65,17 +60,13 @@ corresponding to a mode at approximately **1.90 Hz** with damping ratio approxim
 
 The electrical network is treated as a reduced differential-algebraic system,
 
-\[
-\dot{x}=f(x,z), \qquad 0=g(x,z),
-\]
+$$\dot{x}=f(x,z), \qquad 0=g(x,z),$$
 
 where \(x\) contains dynamic device states and \(z\) contains the algebraic bus voltages.
 
 At each bus, Kirchhoff's current law is enforced using the network admittance matrix. Constant-\(PQ\) loads are represented by
 
-\[
-I_L=\frac{P_L-jQ_L}{V^*}.
-\]
+$$I_L=\frac{P_L-jQ_L}{V^*}.$$
 
 The benchmark currently uses lossless lines.
 
@@ -83,11 +74,9 @@ The benchmark currently uses lossless lines.
 
 The SG is represented as an internal voltage source behind transient reactance. Its physical inertia is placed on the common system base,
 
-\[
-H_{\mathrm{sys}}=H\frac{S_r}{S_B},
+$$H_{\mathrm{sys}}=H\frac{S_r}{S_B},
 \qquad
-M_{\mathrm{sys}}=\frac{2HS_r}{\omega_0S_B}.
-\]
+M_{\mathrm{sys}}=\frac{2HS_r}{\omega_0S_B}.$$
 
 Its transient reactance and damping are also converted from device base to system base as the aggregate rating changes.
 
@@ -116,8 +105,7 @@ The GFL has no swing inertia, but it has an explicit rating \(S_r\), so its curr
 
 The installed-capacity fractions are
 
-\[
-\rho_{\mathrm{SG}}
+$$\rho_{\mathrm{SG}}
 =
 \frac{\sum S_{r,\mathrm{SG}}}
      {\sum S_r},
@@ -130,16 +118,13 @@ The installed-capacity fractions are
 \rho_{\mathrm{GFL}}
 =
 \frac{\sum S_{r,\mathrm{GFL}}}
-     {\sum S_r}.
-\]
+     {\sum S_r}.$$
 
 These are **fractions of installed apparent-power rating**, not fractions of the number of generating units.
 
 In the current benchmark only, active-power dispatch is chosen proportional to installed capacity:
 
-\[
-P_i=\rho_i P_L.
-\]
+$$P_i=\rho_i P_L.$$
 
 This is an experimental assumption, not part of the definition of \(\rho_i\). A future version should separate installed-capacity share from instantaneous dispatch share.
 
@@ -155,37 +140,27 @@ The capacity-composition experiment uses a three-bus meshed island:
 
 Line reactances are:
 
-\[
-X_{\mathrm{SG,GFM}}=0.25,
+$$X_{\mathrm{SG,GFM}}=0.25,
 \qquad
 X_{\mathrm{GFM,GFL}}=0.30,
 \qquad
 X_{\mathrm{SG,GFL}}=0.30
-\quad \mathrm{pu}.
-\]
+\quad \mathrm{pu}.$$
 
 Loads are:
 
-\[
-S_{\mathrm{Load,GFM}}=0.35+j0.10,
-\]
+$$S_{\mathrm{Load,GFM}}=0.35+j0.10,$$
 
-\[
-S_{\mathrm{Load,GFL}}=1.15+j0.25
-\quad \mathrm{pu}.
-\]
+$$S_{\mathrm{Load,GFL}}=1.15+j0.25
+\quad \mathrm{pu}.$$
 
 Hence
 
-\[
-P_L=1.50,\qquad Q_L=0.35 \quad \mathrm{pu}.
-\]
+$$P_L=1.50,\qquad Q_L=0.35 \quad \mathrm{pu}.$$
 
 The total installed generation rating is
 
-\[
-S_{\mathrm{total}}=2.0 \quad \mathrm{pu},
-\]
+$$S_{\mathrm{total}}=2.0 \quad \mathrm{pu},$$
 
 so proportional dispatch corresponds to 75% active loading before reactive-power requirements are included.
 
@@ -201,9 +176,7 @@ ibr_capacity_composition_map_0025_v4_1.csv
 
 The simplex is sampled at
 
-\[
-\Delta \rho=0.025,
-\]
+$$\Delta \rho=0.025,$$
 
 giving 861 compositions.
 
@@ -247,11 +220,9 @@ which is the saved Version 4.1 result set used for the report.
 
 The repository stores the composition data as CSV. A ternary-style triangle can be plotted in ordinary Cartesian coordinates using
 
-\[
-x=\rho_{\mathrm{GFM}}+\frac{1}{2}\rho_{\mathrm{GFL}},
+$$x=\rho_{\mathrm{GFM}}+\frac{1}{2}\rho_{\mathrm{GFL}},
 \qquad
-y=\frac{\sqrt{3}}{2}\rho_{\mathrm{GFL}}.
-\]
+y=\frac{\sqrt{3}}{2}\rho_{\mathrm{GFL}}.$$
 
 For example:
 
