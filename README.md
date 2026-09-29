@@ -106,18 +106,13 @@ The GFL has no swing inertia, but it has an explicit rating \(S_r\), so its curr
 The installed-capacity fractions are
 
 $$\rho_{\mathrm{SG}}
-=
-\frac{\sum S_{r,\mathrm{SG}}}
-     {\sum S_r},
-\qquad
-\rho_{\mathrm{GFM}}
-=
-\frac{\sum S_{r,\mathrm{GFM}}}
-     {\sum S_r},
-\qquad
-\rho_{\mathrm{GFL}}
-=
-\frac{\sum S_{r,\mathrm{GFL}}}
+=\frac{\sum S_{r,\mathrm{SG}}}
+     {\sum S_r},$$
+$$\rho_{\mathrm{GFM}}
+=\frac{\sum S_{r,\mathrm{GFM}}}
+     {\sum S_r},$$
+$$\rho_{\mathrm{GFL}}
+=\frac{\sum S_{r,\mathrm{GFL}}}
      {\sum S_r}.$$
 
 These are **fractions of installed apparent-power rating**, not fractions of the number of generating units.
